@@ -1,6 +1,6 @@
 1. Connect to server via ssh
 
-`ssh -l [username] [ip address] -> then enter password of username`
+`ssh -l [username] [ip address]`
 
 2. Copy file from local to server
 
