@@ -16,15 +16,52 @@
 
 `sudo apt-get install mysql-server`
 
-5. (Optional) Configure MySQL security
+### Fedora, CentOs,...
+
+`wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm`
+
+`sudo rpm –ivh mysql80-community-release-el7-3.noarch.rpm`
+
+`sudo yum install mysql-server`
+
+***After installing, you must start MySQL service***
+
+## Terminal Commands
+0. Find temporary password
+
+`sudo grep ‘temporary password’ /var/log/mysqld.log`
+
+1. Login
+
+`(sudo) mysql -u username -p`
+
+2. Start MySQL service
+
+`sudo systemctl start mysqld`
+
+3. Check status service
+
+`sudo systemctl status mysqld`
+
+4. Disable startup
+
+`sudo systemctl disable mysqld`
+
+5. Stop service
+
+`sudo systemctl stop mysqld`
+
+6. Configure MySQL security
 
 `sudo mysql_secure_installation`
 
-### Fedora, CentOs,...
+7. Exit mysql
 
-## Terminal Commands
+`exit`
 
-`(sudo) mysql -u username -p`
+8. Check MySQL version
+
+`mysql --version`
 
 ## SQL
 * change password policies
