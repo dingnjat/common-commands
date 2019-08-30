@@ -85,3 +85,12 @@ FLUSH PRIVILEGES;
 
 `SHOW TABLES;`
 
+* Import from file
+
+```
+SET autocommit=0;
+source [file-path];
+COMMIT;
+SET autocommit=1;
+```
+

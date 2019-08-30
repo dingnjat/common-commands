@@ -22,3 +22,8 @@
 
 `scp -r [username]@[ip address]:[remote dir] [local dir]`
 
+** CentOS need configure firewall port 80 in order to access from internet **
+
+`firewall-cmd --add-port=80/tcp --permanent`
+
+`firewall-cmd --reload`
