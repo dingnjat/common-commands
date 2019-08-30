@@ -1,0 +1,41 @@
+->>>>>>>>>> GÕ tiếng việt
+Install dconf editor: apt install dconf-editor.
+Open the app, search for property `source` in /org/gnome/desktop/input-source
+Change it with the pattern: [('xkb', 'us'), ('ibus', 'xxx')] which `xxx` is your input source like Unikey, Teni, etc. I'm stick with Teni for better experience. You can check it out Teni-github.
+Logout
+->>>>>>>>>>> set hotcorner thu nhỏ
+gsettings set org.pantheon.desktop.gala.behavior hotcorner-bottomleft 'minimize-current'
+->>>>>>>>>>> thêm ứng dụng ngoài vào launcher applications
+cài AppEditor trên store là ok
+->>>>>>>>>>> double click to open
+gsettings set io.elementary.files.preferences single-click false
+--->>>>>>>>> Nhấn phím super để show application menu
+gsettings set org.gnome.mutter overlay-key "'Super_L'"
+gsettings set org.pantheon.desktop.gala.behavior overlay-action "'wingpanel --toggle-indicator=app-launcher'"
+--->>>>>>>>> THay doi theme, icon
+1. Tao thu muc .theme va .icon o /home/dingnyat/
+2. Tai theme va icon compression ve, giai nen vao .theme hoac .icon
+3. vao elementary os tweaks thay doi
+----------------------------------------------------------------------------------
+->>>>>>>>> cài netdiscover
+sudo apt-get install netdiscover
+-->>>>>>>> cài dsniff để dùng arpspoof, dnsspoof
+sudo apt install dsniff
+->>>>>>>>>> hoac nmap
+sudo apt install nmap
+->>>>>>>>> arpspoofing (gây lag mạng là chính, chứ target có vào được mạng đâu mà chơi :))
+1. ip route -> lấy default gateway
+2. sudo netdiscover -r [default_gateway] hoac sudo nmap -sP [default-gateway]
+3. sudo arpspoof -i [network inteface] -t [targetIP] -r [default_gateway]
+---------------------------------------------------------------------------------
+->>>> install from source
+1. sudo apt-get install build-essential
+2. tar -xzvf file.tar.gz or tar -xjvf file.tar.bz2
+3. cd /file
+4. xdg-open INSTALL (de xem huong dan cua file do) Thường là theo lệnh sau
+5. mkdir build && cd build
+6. cmake ../
+7. make
+8. sudo make install
+make clean-all nếu build bị lỗi hoặc thiếu phải build lại
+thường thì thiếu thư viện nhiều, phải lên mạng tải mới build được. tip là một số thư viện thêm -dev đằng sau là ok
