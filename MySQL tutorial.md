@@ -19,6 +19,7 @@
 ### Fedora, CentOs,...
 
 `wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm`
+
 `wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm`
 
 `sudo rpm –ivh mysql80-community-release-el7-3.noarch.rpm`
@@ -34,7 +35,9 @@
 
 1. Login
 
-`(sudo) mysql -u username -p`
+`mysql -u [username] -p`
+
+`mysql -u [username] -p -h [remote MySQL Server IP]`
 
 2. Start MySQL service
 
@@ -80,9 +83,10 @@ FLUSH PRIVILEGES;
 ```
 * Remote Mysql Server
 
-`GRANT [ALL, SELECT, INSERT, DELETE,...] ON [database name].[table name] TO '[username in remote mysql]'@'[ip address]' IDENTIFIED BY '[MySQL password]';`
+`GRANT [ALL, SELECT, INSERT, UPDATE, DELETE,...] ON [database name].[table name] TO '[username in remote mysql]'@'[ip address]' IDENTIFIED BY '[MySQL password]';`
 
 _[database name], [table name] can set wildcard *_
+
 _ip address can set localhost, 127.0.0.1 or wildcard %_
 
 * show databases, show tables
