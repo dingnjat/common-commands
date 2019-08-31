@@ -75,9 +75,15 @@
 
 ```
 CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON * . * TO 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
 ```
+* Remote Mysql Server
+
+`GRANT [ALL, SELECT, INSERT, DELETE,...] ON [database name].[table name] TO '[username in remote mysql]'@'[ip address]' IDENTIFIED BY '[MySQL password]';`
+
+_[database name], [table name] can set wildcard *_
+_ip address can set localhost, 127.0.0.1 or wildcard %_
 
 * show databases, show tables
 
