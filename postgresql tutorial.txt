@@ -20,3 +20,12 @@ Create new user
 
 To login into new user, change pg_hba.conf peer to md5
 1. psql -U [user] -d [database] -W
+
+To allow to access remotely
+
+1. Open port if closed by firewall
+2. add to the end of /var/lib/pgsql/11/data/postgresql.conf
+listen_addresses = '*'
+3. Change in /var/lib/pgsql/11/data/pg_hba.conf
+host all all [ip/32 or 0.0.0.0/0 to any ip] md5
+4. restart postgresql service
