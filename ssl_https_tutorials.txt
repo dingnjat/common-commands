@@ -1,0 +1,7 @@
+1. Đầu tiên cần tạo Certificate Signing Request: nhập thông tin về web với tổ chức linh tinh
+->>> được 2 file là csr và private key
+2. Lên SSL provider đăng kí SSL thông qua content file csr
+->>> được 2 file crt, 1 file server crt, 1 file CA crt
+3. tạo file keystore pkcs12 cho tomcat
+openssl pkcs12 -export -in [server_crt] -inkey [private_key] -certfile [ca_crt] -out [keystore.p12] -name [name alias]
+4. Xong. Dùng file .p12 cho cấu hình tomcat, spring
