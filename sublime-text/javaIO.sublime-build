@@ -1,0 +1,4 @@
+{
+	"shell_cmd": "javac $file && java $file_base_name < in.txt > out.txt",
+	"working_dir": "$file_path"
+}
