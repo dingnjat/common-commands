@@ -1,4 +1,10 @@
 # Install GitLab on Linux Centos 8
+## Enviroment
+* GitLab version 14.1.2 <br>
+`grep gitlab /opt/gitlab/version-manifest.txt` or <br>
+`sudo gitlab-rake gitlab:env:info` <br>
+* CentOS 8 version 8.4.2105 - Kernel: Linux 4.18.0-305.10.2.el8_4.x86_64<br>
+`cat /etc/centos-release`
 ### 1. Install the necessary dependencies
 `sudo dnf install -y curl policycoreutils openssh-server perl`
 ### 2. Configure HTTP, HTTPS, SSH
