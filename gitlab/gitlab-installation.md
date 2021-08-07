@@ -32,8 +32,8 @@ EE version <br>
 CE version <br>
 `sudo dnf install -y gitlab-ce` <br>
 ### 5. Configure GitLab
-Go to **/etc/gitlab/gitlab.rb**. Create it if not exists <br>
-Set `EXTERNAL_URL 'https://yourdomain'` <br>
+Go to **/etc/gitlab/gitlab.rb** (create it if not exists) <br>
+Set `external_url 'https://yourdomain'` <br>
 Set `gitlab_rails['initial_root_password'] = '<my_strong_password>'` <br>
 ### 6. Run configuration
 `sudo gitlab-ctl reconfigure`
