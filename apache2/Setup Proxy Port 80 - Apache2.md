@@ -1,4 +1,4 @@
-###If you use Apache2, it defaultly uses port 80. Then if you need http port 80 point to your web app port like 8080
+### If you use Apache2, it defaultly uses port 80. Then if you need http port 80 point to your web app port like 8080
 1. Add or edit ```/etc/apache2/sites-available/000-default.conf```
 ```
 <VirtualHost *:80>
