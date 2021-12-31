@@ -1,4 +1,5 @@
-1. Make sure DNS configuration is setup![image](https://user-images.githubusercontent.com/14835764/147650609-f7694716-20e0-4873-9f45-239f6cac98b8.png)
+1. Make sure DNS configuration is setup![image](https://user-images.githubusercontent.com/14835764/147830162-6cba2960-e841-4f3e-8f80-006ea18c228a.png)
+
 2. Add to Apache2 default conf ```/etc/apache2/sites-available/000-default.conf``` <br/> Or create ```/etc/apache2/sites-available/subdomain.example.com.conf```
 ```
 <VirtualHost *:80>
