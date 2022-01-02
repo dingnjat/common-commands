@@ -15,4 +15,4 @@
 3. Change in `/var/lib/pgsql/11/data/pg_hba.conf`: `host all all [ip/32 or 0.0.0.0/0 to any ip] md5`
 4. Restart service: `sudo systemctl restart postgresql-11`
 ### Basic PostgreSQL query
-1. Create a user `CREATE USER username WITH ENCRYPTED PASSWORD 'password' ROLE1 ROLE2;`
+1. Create a user `CREATE USER larry WITH ENCRYPTED PASSWORD 'x' SUPERUSER CREATEROLE CREATEDB REPLICATION BYPASSRLS;`
