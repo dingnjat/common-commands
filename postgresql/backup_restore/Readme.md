@@ -9,3 +9,4 @@
 00 23 * * * ./pg_backup.sh -c pg_backup.config
 @daily ./pg_backup.sh -c pg_backup.config
 ```
+(cron job run by `crontab`)
