@@ -113,7 +113,6 @@ if [[ $ENABLE_MONTHLY_BACKUP == "true" ]]; then
 		# Delete all expired monthly directories
 		find $BACKUP_DIR -maxdepth 1 -name "*-monthly" -exec rm -rf '{}' ';'
 		perform_backups "-monthly"
-		exit 0;
 	fi
 fi
 
@@ -126,7 +125,6 @@ if [[ $ENABLE_WEEKLY_BACKUP == "true" ]]; then
 		# Delete all expired weekly directories
 		find $BACKUP_DIR -maxdepth 1 -mtime +$EXPIRED_DAYS -name "*-weekly" -exec rm -rf '{}' ';'
 		perform_backups "-weekly"
-		exit 0;
 	fi
 fi
 
