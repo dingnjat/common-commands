@@ -23,7 +23,8 @@ Enable: `sudo systemctl enable jenkins` <br>
 Start: `sudo systemctl start jenkins` <br>
 Restart: `sudo systemctl restart jenkins` <br>
 ### Change port
-Change the port in file `/etc/sysconfig/jenkins` and restart service
+Change the port in file `/etc/sysconfig/jenkins` and restart service <br>
+You might have to change port in `/usr/lib/systemd/system/jenkins.service`
 ### Run and Setup
 1. Open the URL and you will see this on the browser: <br>
 ![Jenkins Initial Root Password](./jenkins_initial_root_password.png)
