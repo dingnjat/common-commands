@@ -41,5 +41,6 @@ CE version <br>
 Go to **/etc/gitlab/gitlab.rb** (create it if not exists) <br>
 Set `external_url 'https://yourdomain'` <br>
 Set `gitlab_rails['initial_root_password'] = '<my_strong_password>'` <br>
+Set port `nginx['enable'] = true` and `nginx['listen_port'] = 9091`
 ### 6. Run configuration
 `sudo gitlab-ctl reconfigure`
