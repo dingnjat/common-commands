@@ -44,3 +44,5 @@ Set `gitlab_rails['initial_root_password'] = '<my_strong_password>'` <br>
 Set port `nginx['enable'] = true` and `nginx['listen_port'] = 9091`
 ### 6. Run configuration
 `sudo gitlab-ctl reconfigure`
+### 7. Turn off auto-start
+`sudo chkconfig gitlab-runsvdir off`
