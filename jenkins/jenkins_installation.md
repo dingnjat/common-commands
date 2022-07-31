@@ -19,7 +19,7 @@ gpgcheck=1
 ### Install Jenkins package
 Run: `sudo dnf install jenkins`
 ### Start Jenkins service
-Enable: `sudo systemctl enable jenkins` <br>
+Enable (Auto start): `sudo systemctl enable jenkins` <br>
 Start: `sudo systemctl start jenkins` <br>
 Restart: `sudo systemctl restart jenkins` <br>
 ### Change port
@@ -37,7 +37,7 @@ sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenk
 You may run update command before installing Jenkins <br>
 Run: `sudo apt-get install jenkins`
 ### Start Jenkins service
-Enable: `sudo systemctl enable jenkins` <br>
+Enable (Auto start): `sudo systemctl enable jenkins` <br>
 Start: `sudo systemctl start jenkins` <br>
 Restart: `sudo systemctl restart jenkins` <br>
 ### Change port
