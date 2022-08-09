@@ -1,3 +1,6 @@
+## Install PostgreSQL 12 on Linux
+Same steps as 11, but pg_hba.conf and postgresql.conf were not in /var/lib/pgsql/11/data/ anymore. They locate in /etc/postgresql/12/main
+
 ## Install PostgreSQL 11 on Linux
 1. Go to Dowload PostgreSQL site, choose your OS and then follow the steps
 2. After installing and starting the PostgreSQL services, run: `sudo su - postgres`, enter sudo password.
@@ -16,5 +19,3 @@
 4. Restart service: `sudo systemctl restart postgresql-11`
 ### Basic PostgreSQL query
 1. Create a user `CREATE USER larry WITH ENCRYPTED PASSWORD 'x' SUPERUSER CREATEROLE CREATEDB REPLICATION BYPASSRLS;`
-## Install PostgreSQL 12 on Linux
-Same steps as 11, but pg_hba.conf and postgresql.conf were not in /var/lib/pgsql/11/data/ anymore. They locate in /etc/postgresql/12/main
