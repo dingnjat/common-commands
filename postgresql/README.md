@@ -1,4 +1,4 @@
-## Install PostgreSQL on Linux
+## Install PostgreSQL 11 on Linux
 1. Go to Dowload PostgreSQL site, choose your OS and then follow the steps
 2. After installing and starting the PostgreSQL services, run: `sudo su - postgres`, enter sudo password.
 3. If you has not set PATH yet, run `export PATH="path_to_bin:$PATH"`. E.g `export PATH="/usr/pgsql-11/bin:$PATH"`.
